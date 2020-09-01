@@ -15,3 +15,17 @@ document.addEventListener('scroll',()=>{
         navbar.classList.remove('navbar--dark');
     }
 });
+
+
+// js 72. select the next selection and remove selection from the previous item  
+
+window.addEventListener('click',(e)=>{
+    
+const active = document.querySelector('.category__btn.selected');
+if (active!=null) {
+    
+    active.classList.remove('selected');
+}
+e.target.classList.add('selected');
+
+});
