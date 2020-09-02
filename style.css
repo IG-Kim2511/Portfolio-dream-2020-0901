@@ -62,7 +62,7 @@ body {
 
 a {
   text-decoration: none;
-  padding-left: 0;
+  color: var(--color-black);
 }
 
 ul {
@@ -288,4 +288,7 @@ p {
   color: var(--color-strong-orange);
 }
 
+.work__projects{
+  
+}
 /* background-color: yellow; */
