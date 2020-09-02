@@ -1,7 +1,7 @@
 
 
 # I numberd the codes to connect to the other code.
-# so you can find 'js 70' at JS file if you see 'js 70' at CSS file. 
+# so you can find 'js 72' at JS file if you see 'js 72' at CSS or HTML file. 
 
 ![I numberd the codes (1)](https://user-images.githubusercontent.com/59094101/92045743-4ab81a00-ed4f-11ea-9f52-4783db7f816f.jpg)
 ![I numberd the codes (2)](https://user-images.githubusercontent.com/59094101/92045744-4ab81a00-ed4f-11ea-94d1-75493e25290f.jpg)
