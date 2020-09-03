@@ -22,12 +22,11 @@ document.addEventListener("scroll", () => {
 const navbarMenu = document.querySelector(".navbar__menu");
 
 navbarMenu.addEventListener("click", (event) => {
-
   const target = event.target;
   const link = target.dataset.link;
 
   const scrollTo = document.querySelector(link);
- 
+
   scrollTo.scrollIntoView({ behavior: "smooth" });
 
   if (link === null) {
@@ -40,7 +39,7 @@ navbarMenu.addEventListener("click", (event) => {
 
 // js 74.  Navbar toggle button for small screen
 
-const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
 
 navbarToggleBtn.addEventListener("click", () => {
   let navbarMenu = document.querySelector(".navbar__menu");
