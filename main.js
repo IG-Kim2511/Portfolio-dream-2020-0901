@@ -22,28 +22,31 @@ document.addEventListener("scroll", () => {
 const navbarMenu = document.querySelector(".navbar__menu");
 
 navbarMenu.addEventListener("click", (event) => {
-  // console.log(event.target);
-  // console.log(event.target.dataset.link);
 
   const target = event.target;
   const link = target.dataset.link;
 
   const scrollTo = document.querySelector(link);
-  // console.log(scrollTo);
+ 
   scrollTo.scrollIntoView({ behavior: "smooth" });
 
   if (link === null) {
     return;
   }
 
-  //   js 74. shutting down navbar when you scroll at mobile
+  //   js 74. shutting down navbar when you click menu button
   navbarMenu.classList.remove("open");
 });
 
-// js 74
+// js 74.  Navbar toggle button for small screen
 
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
 
+navbarToggleBtn.addEventListener("click", () => {
+  let navbarMenu = document.querySelector(".navbar__menu");
 
+  navbarMenu.classList.toggle("open");
+});
 
 // js 70. project button animation
 
@@ -72,6 +75,7 @@ document.addEventListener("scroll", () => {
 
   if (window.scrollY > homeHeight / 2) {
     arrowUp.classList.add("visible");
+    navbarMenu.classList.remove("open");
   } else {
     arrowUp.classList.remove("visible");
   }

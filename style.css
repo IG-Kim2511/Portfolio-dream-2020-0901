@@ -162,7 +162,7 @@ p {
   right: 32px;
   font-size: 24px;
   color: var(--color-blue);
-  /* css12 */
+  /* css 12 */
   display: none;
 }
 
@@ -419,15 +419,61 @@ p {
   pointer-events: none;
 
   transition: all var(--animation_duration300ms) ease-in;
-
-  /* background-color: yellow; */
 }
 
 /* js 90. */
-.arrow-up.visible{
+.arrow-up.visible {
   opacity: 1;
   pointer-events: auto;
 }
 
 /*for below 768px screen width  */
 
+@media screen and (max-width: 786px) {
+  :root {
+    /* font size */
+
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
+  .navbar__toggle-btn {
+    /* css 12 */
+    display: block;
+    top: 16px;
+    right: 16px;
+    font-size-adjust: var(--font-medium);
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+
+    background-color: var(--color-orange);
+  }
+  
+  .navbar__menu{
+    width: 100%;
+
+    flex-direction: column;
+    text-align: center;
+    
+    display: none;
+    background-color: yellow;
+  }
+
+  /* js 74 */
+  .navbar__menu.open{
+    display: block;
+  }
+
+
+
+
+
+
+
+}
