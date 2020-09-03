@@ -17,6 +17,34 @@ document.addEventListener("scroll", () => {
   }
 });
 
+// js 60. handle scrolling when tapping on the navbar
+
+const navbarMenu = document.querySelector(".navbar__menu");
+
+navbarMenu.addEventListener("click", (event) => {
+  // console.log(event.target);
+  // console.log(event.target.dataset.link);
+
+  const target = event.target;
+  const link = target.dataset.link;
+
+  const scrollTo = document.querySelector(link);
+  // console.log(scrollTo);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+
+  if (link === null) {
+    return;
+  }
+
+  //   js 74. shutting down navbar when you scroll at mobile
+  navbarMenu.classList.remove("open");
+});
+
+// js 74
+
+
+
+
 // js 70. project button animation
 
 // projectContainer.classList.add('anim-out');
