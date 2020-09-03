@@ -26,15 +26,35 @@ navbarMenu.addEventListener("click", (event) => {
   const link = target.dataset.link;
 
   const scrollTo = document.querySelector(link);
-
   scrollTo.scrollIntoView({ behavior: "smooth" });
 
   if (link === null) {
     return;
   }
 
-  //   js 74. shutting down navbar when you click menu button
+  //   (js 74). shutting down navbar when you click menu button
   navbarMenu.classList.remove("open");
+});
+
+//js 60-2. 'contact me' button:  click and move to there
+
+const homeContactBtn = document.querySelector(".home__contact");
+
+homeContactBtn.addEventListener("click", () => {
+  scrollIntoView("#contact");
+});
+
+// (js 60-3)
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+}
+
+//js 60-3. Handle click  on the 'arrow up' button
+
+const arrowUp = document.querySelector(".arrow-up");
+arrowUp.addEventListener("click", () => {
+  scrollIntoView("#home");
 });
 
 // js 74.  Navbar toggle button for small screen
@@ -47,20 +67,14 @@ navbarToggleBtn.addEventListener("click", () => {
   navbarMenu.classList.toggle("open");
 });
 
-// js 92. 'contact me' button : click and move to there
+// js 94  make home slowly fade to transparent as the window scrolls down
 
-const homeContactBtn = document.querySelector(".home__contact");
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
 
-homeContactBtn.addEventListener("click", () => {
-  scrollIntoView("#contact");
+document.addEventListener("scroll", () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
 });
-
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
-}
-
-// js 94
 
 // js 90. Show "arrow up" button when scrolling down
 
