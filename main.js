@@ -47,6 +47,35 @@ navbarToggleBtn.addEventListener("click", () => {
   navbarMenu.classList.toggle("open");
 });
 
+// js 92. 'contact me' button : click and move to there
+
+const homeContactBtn = document.querySelector(".home__contact");
+
+homeContactBtn.addEventListener("click", () => {
+  scrollIntoView("#contact");
+});
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+}
+
+// js 94
+
+// js 90. Show "arrow up" button when scrolling down
+
+document.addEventListener("scroll", () => {
+  const arrowUp = document.querySelector(".arrow-up");
+  const homeHeight = home.getBoundingClientRect().height;
+
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add("visible");
+    navbarMenu.classList.remove("open");
+  } else {
+    arrowUp.classList.remove("visible");
+  }
+});
+
 // js 70. project button animation
 
 // projectContainer.classList.add('anim-out');
@@ -64,18 +93,4 @@ window.addEventListener("click", (e) => {
     active.classList.remove("selected");
   }
   e.target.classList.add("selected");
-});
-
-// js 90. Show "arrow up" button when scrolling down
-
-document.addEventListener("scroll", () => {
-  const arrowUp = document.querySelector(".arrow-up");
-  const homeHeight = home.getBoundingClientRect().height;
-
-  if (window.scrollY > homeHeight / 2) {
-    arrowUp.classList.add("visible");
-    navbarMenu.classList.remove("open");
-  } else {
-    arrowUp.classList.remove("visible");
-  }
 });
