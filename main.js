@@ -90,14 +90,6 @@ document.addEventListener("scroll", () => {
   }
 });
 
-// js 70. project button animation
-
-// projectContainer.classList.add('anim-out');
-
-// setTimeout(() => {
-//     projectContainer.classList.remove('anim-out');
-// }, 300);
-
 // js 72. select the next selection and remove selection from the previous item
 
 window.addEventListener("click", (e) => {
@@ -107,4 +99,36 @@ window.addEventListener("click", (e) => {
     active.classList.remove("selected");
   }
   e.target.classList.add("selected");
+});
+
+// js 68. projects. button click and move to the project.
+
+const workBtnContainer = document.querySelector(".work__categories");
+const projectContainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+
+workBtnContainer.addEventListener("click", (e) => {
+  // 68-1
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+
+  if (filter == null) {
+    return;
+  }
+
+  //  68-2
+  projects.forEach((project) => {
+    if (filter === "*" || filter === project.dataset.type) {
+      project.classList.remove("invisible");
+    } else {
+      project.classList.add("invisible");
+    }
+  });
+
+  // js 70. project button animation
+
+  projectContainer.classList.add("anim-out");
+
+  setTimeout(() => {
+    projectContainer.classList.remove("anim-out");
+  }, 300);
 });

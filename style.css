@@ -300,7 +300,7 @@ p {
 }
 /* js 70 */
 .work__projects.anim-out {
-  transform: scale(0.9) translateY(40px);
+  transform: scale(0.9) translateY(10px);
 }
 
 /* css 16  */
