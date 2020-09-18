@@ -364,7 +364,7 @@ p {
 }
 .project__description .h3:hover,
 .project__description .span:hover {
-  color: var(--color-blue);
+  color: var(--color-orange);
   
   transform: scale(1.1);
   transition: all var(--animation_duration300ms) ease-in;
