@@ -227,6 +227,10 @@ p {
   font-size: var(--font-medium28);
 
   color: var(--color-orange);
+
+  display: block;
+  margin-top: auto;
+  margin-bottom: 170px;
 }
 
 .major__icon {
