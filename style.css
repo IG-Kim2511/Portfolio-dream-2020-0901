@@ -216,12 +216,14 @@ p {
 .about__majors {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 80px 0;
 }
 
+
 .major {
   margin-bottom: 38px;
+  padding-right: 30px;
 }
 .major_description {
   font-size: var(--font-medium28);
@@ -231,6 +233,7 @@ p {
   display: block;
   margin-top: auto;
   margin-bottom: 170px;
+  padding-right: 30px;
 }
 
 .major__icon {
@@ -460,8 +463,8 @@ p {
   opacity: 1;
   pointer-events: auto;
 }
-/*for below 1150px screen width  */
-@media screen and (max-width: 1150px) {
+/*for below 1200px screen width  */
+@media screen and (max-width: 1200px) {
   .major__icon {
     width: 80px;
     height: 80px;
