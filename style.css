@@ -249,9 +249,13 @@ p {
   margin: auto;
   margin-bottom: 16px;
 }
-.major__icon:hover i {
+.major__icon img{
+  width: 80%;
+}
+.major__icon:hover i,
+.major__icon img:hover {
   color: var(--color-orange);
-  transform: rotate(-30deg) scale(1.1);
+  transform: rotate(-30deg) scale(1.2);
 
   transition: all var(--animation_duration300ms);
 }
