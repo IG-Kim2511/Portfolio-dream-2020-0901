@@ -185,7 +185,8 @@ p {
 .home__description {
   color: var(--color-black);
 }
-.home__contact {
+.home__contact,
+.my_github {
   border: 2px solid var(--color-black);
   border-radius: var(--size-border-radius4px);
   color: var(black);
@@ -195,7 +196,8 @@ p {
   padding: 8px 12px;
   transition: all var(--animation_duration300ms) ease-in-out;
 }
-.home__contact:hover {
+.home__contact:hover,
+.my_github:hover {
   background-color: var(--color-blue);
 }
 
