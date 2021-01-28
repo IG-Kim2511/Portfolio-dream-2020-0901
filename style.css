@@ -180,9 +180,6 @@ p {
   border-radius: 50%;
   border: 2px solid var(--color-black);
 }
-.about_avatar{
-  width: 0.1%;
-}
 
 .home__title,
 .home__description {
