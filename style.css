@@ -254,6 +254,10 @@ p {
 .major__icon img{
   width: 80%;
 }
+.major__icon .jquery{
+  width: 50%;
+}
+
 .major__icon:hover i,
 .major__icon img:hover {
   color: var(--color-orange);

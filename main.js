@@ -76,9 +76,12 @@ document.addEventListener("scroll", () => {
   homeAvatar.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
+
+
 // js 90. Show "arrow up" button when scrolling down
 
 document.addEventListener("scroll", () => {
+
   const arrowUp = document.querySelector(".arrow-up");
   const homeHeight = home.getBoundingClientRect().height;
 
@@ -89,6 +92,7 @@ document.addEventListener("scroll", () => {
     arrowUp.classList.remove("visible");
   }
 });
+
 
 // js 72. select the next selection and remove selection from the previous item
 
