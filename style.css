@@ -208,6 +208,13 @@ p {
   padding: 50px;
   padding-top: 80px;
 }
+#about{
+  padding-bottom: 0;
+
+}
+#work{
+padding-top: 0;
+}
 
 .section__container {
   max-width: 1200px;
@@ -537,7 +544,7 @@ p {
     padding-top: 40px;
   }
 
-  .about__majors {
+    .about__majors {
     flex-direction: column;
     margin-top: 30px;
     margin-bottom: 0px;
